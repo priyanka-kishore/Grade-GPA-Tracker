@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Tracker</h1>
+    </header>
+    <div class="pick-tracker">
+        <h2>Pick a tracker to use.</h2>
+            <button onclick="displayGradeCalc()" id="grade-btn">Grade Tracker</button>
+            <button onclick="displayGPACalc()" id="gpa-btn">GPA Tracker</button>
+    </div>
+
+    <div id="gpaTracker" style="display: none">
+        <form onsubmit="return false">
+            Course: <input type="text" id="course-input" autocomplete="off">
+            Credits:
+            <select id="credits-input">
+                <option disabled selected value>Select Credits</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+                <option value="0">0</option>
+            </select>
+            Grade: 
+            <select id="grade-input">
+                <option disabled selected value>Select Grade</option>
+                <option value="4.0">A+</option>
+                <option value="4.0">A</option>
+                <option value="3.7">A-</option>
+                <option value="3.3">B+</option>
+                <option value="3.0">B</option>
+                <option value="2.7">B-</option>
+                <option value="2.3">C+</option>
+                <option value="2.0">C</option>
+                <option value="1.7">C-</option>
+                <option value="1.3">D+</option>
+                <option value="1.0">D</option>
+                <option value="0.7">D-</option>
+                <option value="0.0">F</option>
+            </select>
+            <input type="submit" id="submit" value="Add Course" onclick="initValues()">
+        </form>
+
+        <table id="gpa-results">
+            <tr>
+                <td>Attempted Credits</td>
+                <td id="calc-cred"></td>
+            </tr>
+            <tr>
+                <td>Cumulative GPA</td>
+                <td id="calc-gpa"></td>
+            </tr>
+        </table>
+
+        <table id="gpaTable">
+            <tr>
+                <th>Course</th>
+                <th>Credits</th>
+                <th>Grade</th>
+                <th>Delete</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="gradeTracker" style="display: none">
+        <form onsubmit="return false">
+            Assignment: <input type="text" id="assignment-input" autocomplete="off">
+            Points Earned: <input type="text" id="pts-earned" autocomplete="off">
+            Max Points: <input type="text" id="pts-max" autocomplete="off">
+            Weight (%): <input type="text" id="weight" autocomplete="off">
+            <input type="submit" id="submit" value="Add Assignment" onclick="initAssignment()">
+        </form>
+
+        <table id="final-grade">
+            <tr>
+                <td>Final Grade</td>
+                <td id="calc-grade"></td>
+            </tr>
+        </table>
+
+        <table id="gradeTable">
+            <tr>
+                <th>Assignment</th>
+                <th>Points Earned</th>
+                <th>Maximum Points</th>
+                <th>Percentage Weight</th>
+                <th>Delete</th>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
