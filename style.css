@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 30px;
+    background: rgb(31, 38, 64);
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.pick-tracker {
+    margin: 20px;
+    text-align: center;
+}
+
+button:not(#deleteBtn) {
+    background-clip: padding-box;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    background: black;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    margin: 20px auto auto;
+    text-align: center;
+}
+
+th, td {
+    background-clip: padding-box;
+    border-radius: 5px;
+    background-color: navy;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    padding: 8px;
+    width: 25%;
+}
+
+td {
+    background-color: lightgrey;
+    color: black;
+}
+
+#deleteBtn {
+    background-clip: padding-box;
+    border-radius: 20px;
+    background-color: lightgray;
+    width: 100%;
+    font-size: 15px;
+    border: none;
+}
+
+form {
+    text-align: center;
+}
+
+select {
+    width: 100px;
+    height: 20px;
+    background-color: white;
+}
+
+#course-input {
+    height: 20px;
+    width: 80px;
+    text-align: center;
+}
+
+#submit {
+    width: 100px;
+}
+
+#gpa-results td {
+    width: 50%;
+}
+
+#gradeTracker {
+    margin: auto auto;
+}
+
+#final-grade, #gradeTable {
+    width: 800px;
+}
+
+#pts-earned, #pts-max, #weight {
+    height: 20px;
+    width: 50px;
+}
+
+#gradeTracker #submit {
+    margin: 10px;
+}
